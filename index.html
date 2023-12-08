@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="image-container" id="musicians-container">
+        <div class="musician-image" id="billie">
+            <img src="assets/images/billie.png" alt="Billie">
+            <div class="overlay">
+                <p id="billie_1">1. Billie Eilish/Khalid — Lovely</p>
+                <p id="billie_2">2. Billie Eilish — Everything I Wanted</p>
+                <p id="billie_3">3. Billie Eilish — TV</p>
+            </div>
+        </div>
+        <div class="musician-image right" id="50_cent">
+            <img src="assets/images/50_cent.png" alt="50 Cent">
+            <div class="overlay">
+                <p id="50_cent_1">1. 50 Cent — In Da Club</p>
+                <p id="50_cent_2">2. 50 Cent — Just A Lil Bit</p>
+                <p id="50_cent_3">3. 50 Cent — Disco Inferno</p>
+            </div>
+        </div>
+        <div class="musician-image" id="mitski">
+            <img src="assets/images/mitski.png" alt="Mitski">
+            <div class="overlay">
+                <p id="mitski_1">1. Mitski — My Love Mine All Mine</p>
+                <p id="mitski_2">2. Mitski — First Love/Late Spring</p>
+                <p id="mitski_3">3. Mitski — Washing Machine Heart</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="biography-container" id="biography-container">
+        <label>
+            <textarea id="biography" readonly></textarea>
+        </label>
+    </div>
+
+    <footer>
+        <audio id="audioPlayer" controls>
+            <source src="" type="audio/mp3"> Your browser does not support the audio!
+        </audio>
+    </footer>
+    <script src="scripts/musicPlayer.js"></script>
+    <script type="module" src="scripts/biographyDisplayer.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+body {
+    background: black;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.musician-image {
+    flex: 1;
+    margin: 0 20px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.musician-image:hover {
+    transform: scale(1.1);
+}
+
+
+.musician-image img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    opacity: 0;
+    padding: 5%;
+    transition: opacity 0.3s;
+}
+
+.overlay p {
+    margin: 5px;
+}
+
+.image-container .musician-image:hover .overlay {
+    opacity: 1;
+}
+
+.musician-image:hover {
+    transform: scale(1.1);
+}
+
+.musician-image p:hover {
+    font-weight: bold;
+}
+
+.biography-container {
+    padding: 5%;
+    width: 100%;
+}
+
+.biography-container label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.biography-container textarea {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 5px solid green;
+    border-radius: 10px;
+    background:  rgb(86, 86, 86);
+    resize: vertical;
+    color: white;
+    min-height: 20vh;
+    font-size: 30px;
+    font-family: Georgia, serif;
+}
+
+.biography-container textarea:focus {
+    outline: none;
+}
+
+.biography-container textarea:hover {
+    border-color: red;
+}
+
+footer {
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#audioPlayer {
+    width: 100%;
+    -webkit-border-radius: 100px;
+    padding: 0 1% 0 1%;
+}
+
+#audioPlayer::-webkit-media-controls-panel {
+    background: rgb(169, 169, 169);
+}
+
+#audioPlayer::-webkit-media-controls {
+    filter: invert(100%);
+}
+
+
+@media (max-width: 1024px) {
+    .image-container {
+        flex-direction: column;
+    }
+
+    .musician-image {
+        margin: 20px 0;
+    }
+
+    .musician-image:hover {
+        transform: scale(1.05);
+    }
+}
